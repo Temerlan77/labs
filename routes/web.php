@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\DB;
 
 use App\Models\Client;
 
+use App\Http\Controllers\ClientController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,7 +37,4 @@ Route::get('client/add', function() {
     ]);
 });
 
-Route::get('client', function() {
-    $client = Client::find(1);
-    return $client->age;
-});
+Route::get('client', [ClientController::class, 'index']);
