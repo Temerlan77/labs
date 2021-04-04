@@ -10,4 +10,12 @@ class FilesController extends Controller
     {
         return view('files.upload');
     }
+
+    public function upload(Request $request)
+    {
+        foreach ($request->file('image') as $file) {
+            $file->store('test/images');
+        }
+        return "Success!";
+    }
 }

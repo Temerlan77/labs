@@ -49,3 +49,4 @@ Route::post('client/create', [ClientController::class, 'store'])->name('add-clie
 Route::get('client/{id}', [ClientController::class, 'get_client']);
 
 Route::get('files', [\App\Http\Controllers\FilesController::class, 'show']);
+Route::post('files', [\App\Http\Controllers\FilesController::class, 'upload'])->name('files.upload');

@@ -11,16 +11,16 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-12">
+        <div class="row  justify-content-center mt-5">
+            <div class="col-6">
                 <div class="card">
                     <div class="card-header">File upload</div>
                     <div class="card-body">
-                        <form action="" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('files.upload') }}" method="post" enctype="multipart/form-data">
                             @csrf
 
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="customFile">
+                                <input type="file" name="image[]" multiple class="custom-file-input" id="customFile">
                                 <label class="custom-file-label" for="customFile">Choose file</label>
                             </div>
 
