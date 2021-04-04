@@ -23,5 +23,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/clients', [ApiController::class, 'index']);
 
-Route::post('/clients', [ApiController::class, 'get_client']);
+Route::post('/clients/details', [ApiController::class, 'get_client']); //client_id ->
 

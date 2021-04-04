@@ -7,6 +7,8 @@ use App\Models\Client;
 
 use App\Http\Controllers\ClientController;
 
+use \App\Http\Controllers\FilesController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,3 +47,5 @@ Route::get('client/create', function() {
 Route::post('client/create', [ClientController::class, 'store'])->name('add-client');
 
 Route::get('client/{id}', [ClientController::class, 'get_client']);
+
+Route::get('files', [\App\Http\Controllers\FilesController::class, 'show']);
