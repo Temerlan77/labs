@@ -51,4 +51,11 @@ Route::get('client/{id}', [ClientController::class, 'get_client']);
 Route::get('files', [\App\Http\Controllers\FilesController::class, 'show']);
 Route::post('files', [\App\Http\Controllers\FilesController::class, 'upload'])->name('files.upload');
 
-Route::get('send', 'mailController@send');
+Route::get('/send-mail',function(){
+    $details = [
+        'title' => 'Mail from Surfside Media',
+        'body' =>'This is from testing email using smtp'
+    ];
+    \Mail::to('bads12377@gmail.com')->send(new \App\Mail\TestMail($details));
+    echo "Email has been sent!";
+});
