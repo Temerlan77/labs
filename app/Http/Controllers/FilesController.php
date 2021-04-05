@@ -13,9 +13,14 @@ class FilesController extends Controller
 
     public function upload(Request $request)
     {
+        //$paths = [];
+
         foreach ($request->file('image') as $file) {
-            $file->store('test/images');
+            $paths[] = $file->store('test/images');
         }
+
+        //dd($paths);
+
         return "Success!";
     }
 }
