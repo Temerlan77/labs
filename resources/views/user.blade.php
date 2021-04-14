@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>HTML5 и CSS3 сайт</title>
+  <title>сайт</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -17,6 +17,7 @@
       <a href="#" onclick="slowScroll('#overview')" title="Преимущества">Преимущества</a>
       <a href="#" onclick="slowScroll('#contacts')" title="Контакты">Контакты</a>
       <a href="#" onclick="slowScroll('#faq')" title="Ответы на вопросы">FAQ</a>
+
     </div>
   </header>
 

@@ -59,3 +59,8 @@ Route::get('/send-mail',function(){
     \Mail::to('bads12377@gmail.com')->send(new \App\Mail\TestMail($details));
     echo "Email has been sent!";
 });
+
+
+Route::view('profile', 'profile');
+
+Route::get( 'main', [\App\Http\Controllers\LocalizationController::class, 'index']);
